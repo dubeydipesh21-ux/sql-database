@@ -1,3 +1,36 @@
+
+														#Level 1: Basics
+#1. Retrieve customer names and emails for email marketing
+select name, email from customers;
+
+#2. View complete product catalog with all available details
+select * from products;
+
+#3. List all unique product categories
+SELECT DISTINCT category FROM products;
+
+#4. Show all products priced above ₹1,000
+select name, category, price from products where price>1000 ;
+
+#5. Display products within a mid-range price bracket (₹2,000 to ₹5,000)
+select name , category, Price from products where price between 2000 and 5000;
+
+#6. Fetch data for specific customer IDs (e.g., from loyalty program list)
+SELECT Customer_ID, name, email, Phone from Customers where customer_ID IN( 20 ,30);
+
+#7. Identify customers whose names start with the letter ‘A’
+
+SELECT * FROM customers WHERE name LIKE 'A%';
+
+#8. List electronics products priced under ₹3,000
+select Product_ID, Name, Category, price from products where Price<3000 and category="Electronics";
+
+#9. Display product names and prices in descending order of price
+
+select name from products order by name desc;
+
+#10. Display product names and prices, sorted by price and then by name
+select name, price from products order by name asc , price asc;
 #######################################-----------------Level 2: Filtering and Formatting--------------------------------###############################################
 
 
